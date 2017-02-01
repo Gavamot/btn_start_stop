@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+
+    <link href="BtnStartStop.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+    <button id="btn"></button>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="btnStartStop.js"></script>
+
+    <script>
+
+        var btn = $("#btn").btnStartStop({
+            isStop: true,
+            width: "24px",
+            height: "24px",
+            clickStart: function () { console.log("start") },
+            clickStop: function () { console.log("stop") },
+            changeValue: function (val, old) { console.log("change value new=" + val  +  "| old=" + old) }
+        });
+
+
+
+        //var isStop =  btn.getValue();
+        //btn.changeBtnValue();
+        //btn.setValue(true);
+
+    </script>
+
+</body>
+</html>
