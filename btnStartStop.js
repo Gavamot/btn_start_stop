@@ -35,7 +35,7 @@
         this.element.click($.proxy(function () {
             this.changeBtnValue();
         }, this));
-        this.disabled(this.config.disabled);
+        this.setDisabled(this.config.disabled);
     }
 
     // *********************************************
