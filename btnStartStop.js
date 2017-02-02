@@ -39,6 +39,10 @@
     // *********************************************
     //                Interface
     // *********************************************
+    BtnStartStop.prototype.setDisabled = function(val){
+        $(this.element).prop( "disabled", val );
+    }
+
     BtnStartStop.prototype.getValue = function () {
         return this.config.isStop;
     }
