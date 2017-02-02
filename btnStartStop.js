@@ -9,7 +9,8 @@
         clickStart: function(){},
         clickStop: function(){},
         changeValue: function(newValue, oldValue){},
-        isStop: true
+        isStop: true,
+        disabled : false
     };
 
     function BtnStartStop(element, options) {
@@ -34,6 +35,7 @@
         this.element.click($.proxy(function () {
             this.changeBtnValue();
         }, this));
+        this.disabled(this.config.disabled);
     }
 
     // *********************************************
